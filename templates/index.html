@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garbage Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Garbage Detection System</h1>
+        <input type="file" id="upload" accept="image/*">
+        <button onclick="uploadImage()">Process Image</button>
+        <div id="result">
+            <img id="preview" src="#" alt="Preview">
+            <img id="output" src="#" alt="Result">
+        </div>
+        <div id="loading" class="hidden">Processing...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
