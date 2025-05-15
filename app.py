@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -6,9 +6,15 @@ import base64
 import os
 
 app = Flask(__name__)
+model = YOLO("model_1.pt")
 
-# Load model
-model = YOLO("model_1.pt")  # Ensure model is in same directory
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
 
 @app.route('/process', methods=['POST'])
 def process_image():
@@ -16,13 +22,12 @@ def process_image():
         return jsonify({'error': 'No image uploaded'}), 400
 
     file = request.files['image']
-    img = cv2.imdecode(np.frombuffer(file.read(), np.uint8), cv2.IMREAD_COLOR)
+    img_np = np.frombuffer(file.read(), np.uint8)
+    img = cv2.imdecode(img_np, cv2.IMREAD_COLOR)
     
-    # Process image
     results = model(img)
     annotated = results[0].plot()
     
-    # Convert to base64
     _, buffer = cv2.imencode('.jpg', annotated)
     img_base64 = base64.b64encode(buffer).decode('utf-8')
     

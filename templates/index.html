@@ -1,20 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Garbage Detection</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVision AI - Waste Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Garbage Detection System</h1>
-        <input type="file" id="upload" accept="image/*">
-        <button onclick="uploadImage()">Process Image</button>
-        <div id="result">
-            <img id="preview" src="#" alt="Preview">
-            <img id="output" src="#" alt="Result">
+        <header class="main-header">
+            <h1><i class="fas fa-trash-alt"></i> EcoVision AI</h1>
+            <nav>
+                <a href="{{ url_for('resources') }}" class="nav-button">
+                    <i class="fas fa-book-open"></i> Resources
+                </a>
+            </nav>
+        </header>
+
+        <div class="upload-section">
+            <div class="drop-zone" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & Drop or Click to Upload</p>
+                <input type="file" id="upload" accept="image/*" hidden>
+            </div>
+            <div class="file-info" id="fileInfo"></div>
         </div>
-        <div id="loading" class="hidden">Processing...</div>
+
+        <div class="result-section">
+            <div class="image-comparison">
+                <div class="image-container">
+                    <h3>Original Image</h3>
+                    <img id="preview" class="image-preview">
+                </div>
+                <div class="image-container">
+                    <h3>Analysis Result</h3>
+                    <div class="loading hidden" id="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing image...</p>
+                    </div>
+                    <img id="output" class="image-preview">
+                </div>
+            </div>
+
+            <div class="result-actions hidden" id="resultActions">
+                <button class="btn download-btn" onclick="downloadResult()">
+                    <i class="fas fa-download"></i> Download Result
+                </button>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Detection Confidence</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="confidenceBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message hidden" id="errorMessage"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
