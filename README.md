@@ -24,6 +24,8 @@ Language Used
 - Javascript
 - Python
 
+Project Link - https://github.com/iamSAGARSONI/Smart-Waste-Management-System
+
 Benefits
 
 - Improved Waste Management Efficiency: Optimized waste collection and segregation processes reduce waste disposal costs and minimize environmental impact
