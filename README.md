@@ -24,7 +24,9 @@ Language Used
 - Javascript
 - Python
 
-Video Link - https://youtu.be/khOVCtVykm0
+Main Video Link - https://youtu.be/yG9qe65dtHc
+
+Second Video Link - https://youtu.be/khOVCtVykm0
 
 Project Link - https://github.com/iamSAGARSONI/Smart-Waste-Management-System
 
