@@ -1,5 +1,11 @@
 Smart Waste Management System with Smart Segregation of Waste
 
+Team Nmae - Code Yodhas
+
+Team Members - Sagar Soni 
+             - Siddhi Soni
+             - Akshat Soni 
+
 Overview
 
 The Smart Waste Management System is an innovative solution designed to revolutionize waste management practices in urban areas. This system utilizes advanced technologies such as IoT sensors, AI-powered waste segregation, and data analytics to optimize waste collection, reduce waste disposal costs, and promote sustainability.
@@ -11,6 +17,12 @@ Key Features
 - Data Analytics: Advanced data analytics platform to track waste generation patterns, optimize waste collection routes, and predict waste management needs
 - Automated Waste Collection: Efficient waste collection system that minimizes manual intervention and reduces waste disposal costs
 - Citizen Engagement: User-friendly interface for citizens to report waste-related issues, access waste management information, and participate in sustainability initiatives
+
+Language Used 
+- HTML
+- CSS
+- Javascript
+- Python
 
 Benefits
 
@@ -34,7 +46,3 @@ Future Development
 Contributing
 
 We welcome contributions from developers, researchers, and waste management professionals to improve the Smart Waste Management System. Please submit your contributions through our GitHub repository.
-
-License
-
-The Smart Waste Management System is licensed under the [insert license].
