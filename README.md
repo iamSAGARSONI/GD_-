@@ -24,6 +24,8 @@ Language Used
 - Javascript
 - Python
 
+Video Link - https://youtu.be/khOVCtVykm0
+
 Project Link - https://github.com/iamSAGARSONI/Smart-Waste-Management-System
 
 Benefits
